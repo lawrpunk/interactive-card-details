@@ -63,12 +63,14 @@ body {
 .card-front-box > figure > figcaption {
   position: absolute;
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 4rem;
   margin-left: 2rem;
 }
 
 .card-front-content {
+  width: 85%;
   color: var(--Light-grayish-violet);
   font-weight: 500;
   display: flex;

@@ -33,6 +33,48 @@ successBtn.addEventListener("click", () => {
   location.reload();
 });
 
+// Event listener for the card name input
+document.getElementById("card-name").addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  cardName.textContent = inputValue || "Full Name";
+});
+
+// Event listener for the card number input
+document.getElementById("card-number").addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  cardNumber.textContent = inputValue || "0000 0000 0000 0000";
+});
+
+// Event listener for the expiration month input
+document.getElementById("exp-mm").addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  cardMM.textContent = inputValue || "MM";
+});
+
+// Event listener for the expiration year input
+document.getElementById("exp-yy").addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  cardYY.textContent = inputValue || "YY";
+});
+
+// Event listener for the CVC input
+document.getElementById("card-cvc").addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  cardCVV.textContent = inputValue || "CVC";
+});
+
+// Adding a submit event listener to the form for input validation
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // Calling the validation function
+  validateInput(inputTexts, inputNumbers);
+});
+
+// Adding a click event listener to reload the page when the payment is successful
+successBtn.addEventListener("click", () => {
+  location.reload();
+});
+
 // Function for input validation
 function validateInput(inputTexts, inputNumbers) {
   let allInputsCorrect = true;
