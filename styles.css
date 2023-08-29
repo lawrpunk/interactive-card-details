@@ -63,14 +63,14 @@ body {
 .card-front-box > figure > figcaption {
   position: absolute;
   display: flex;
-  width: 95%;
+  width: 100%;
   flex-direction: column;
   gap: 4rem;
   margin-left: 2rem;
 }
 
 .card-front-content {
-  width: 90%;
+  width: 92%;
   color: var(--Light-grayish-violet);
   font-weight: 500;
   display: flex;
@@ -89,7 +89,7 @@ body {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  margin-right: 3.5rem;
+  margin-right: 2rem;
 }
 
 .card-back-box > figure {
@@ -372,13 +372,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .card-front-content-header {
     font-size: 0.63rem;
-    letter-spacing: 0rem;
+    letter-spacing: 0.1rem;
     font-weight: lighter;
   }
 
   .card-front-content-details {
     font-size: 0.5rem;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
   }
 
   .card-back-box > figure > figcaption > p {
