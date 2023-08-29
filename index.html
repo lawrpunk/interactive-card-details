@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Interactive Card Details Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="card-container">
+      <div class="card-front-box">
+        <figure>
+          <img
+            class="card-front-img"
+            src="images/bg-card-front.png"
+            alt="card-front"
+          />
+          <figcaption>
+            <div>
+              <img
+                class="card-front-logo"
+                src="images/card-logo.svg"
+                alt="card-logo"
+              />
+            </div>
+            <div class="card-front-content">
+              <div class="card-front-content-header">
+                <h2 id="card-front-number" tel="no">0000 0000 0000 0000</h2>
+              </div>
+              <div class="card-front-content-details">
+                <p id="card-front-name">Jane Appleseed</p>
+                <p>
+                  <span id="card-front-mm">00</span>
+                  /
+                  <span id="card-front-yy">00</span>
+                </p>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="card-back-box">
+        <figure>
+          <img
+            class="card-back-img"
+            src="images/bg-card-back.png"
+            alt="card-back"
+          />
+          <figcaption>
+            <p id="card-back-cvv">000</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="details-container">
+      <form action="#" novalidate>
+        <div class="form-item">
+          <label for="card-name">Cardholder Name</label>
+          <input
+            type="text"
+            id="card-name"
+            name="card-name"
+            placeholder="e.g. Jane Appleseed"
+            autocomplete="off"
+            required
+          />
+          <span class="error-message" data-for="card-name"></span>
+        </div>
+        <div class="form-item">
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            autocomplete="off"
+            required
+          />
+          <span class="error-message" data-for="card-number"></span>
+        </div>
+        <div class="form-item-extra">
+          <div>
+            <label for="exp-input">Exp. Date (MM/YY)</label>
+            <div class="form-exp-date">
+              <input
+                class="exp-date-input"
+                type="number"
+                id="exp-mm"
+                name="exp-mm"
+                placeholder="MM"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="exp-date-input"
+                type="number"
+                id="exp-yy"
+                name="exp-yy"
+                placeholder="YY"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <span class="error-message" id="date-error"></span>
+          </div>
+          <div class="form-item-cvc">
+            <label for="card-cvc">CVC</label>
+            <input
+              class="cvc-input"
+              type="number"
+              id="card-cvc"
+              name="card-cvc"
+              placeholder="e.g. 123"
+              autocomplete="off"
+              required
+            />
+            <span class="error-message" id="cvc-error"></span>
+          </div>
+        </div>
+        <div class="form-item">
+          <input type="submit" class="form-btn" value="Confirm" />
+        </div>
+      </form>
+      <div class="success-message-container hide">
+        <img src="images/icon-complete.svg" alt="icon-complete" />
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <div class="form-item">
+          <input id="success-btn" class="form-btn" value="Confirm" />
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
