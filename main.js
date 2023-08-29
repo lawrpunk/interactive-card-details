@@ -36,7 +36,7 @@ successBtn.addEventListener("click", () => {
 // Event listener for the card name input
 document.getElementById("card-name").addEventListener("input", (event) => {
   const inputValue = event.target.value;
-  cardName.textContent = inputValue || "Full Name";
+  cardName.textContent = inputValue || "Jane Appleseed";
 });
 
 // Event listener for the card number input
@@ -48,13 +48,13 @@ document.getElementById("card-number").addEventListener("input", (event) => {
 // Event listener for the expiration month input
 document.getElementById("exp-mm").addEventListener("input", (event) => {
   const inputValue = event.target.value;
-  cardMM.textContent = inputValue || "MM";
+  cardMM.textContent = inputValue || "00";
 });
 
 // Event listener for the expiration year input
 document.getElementById("exp-yy").addEventListener("input", (event) => {
   const inputValue = event.target.value;
-  cardYY.textContent = inputValue || "YY";
+  cardYY.textContent = inputValue || "00";
 });
 
 // Event listener for the CVC input
